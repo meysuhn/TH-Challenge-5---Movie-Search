@@ -125,8 +125,8 @@ $("#movies").click(function(event) {
 
 // When user is on description page, allow them to click back to search results
 $("#backToResults").click(function(event) {
-    allMovies.style.display = "block"; // show all movies screen on load.
-    movieDescriptionScreen.style.display = "none"; // hide description screen on load.
+    allMovies.style.display = "block"; // show all movies results screen
+    movieDescriptionScreen.style.display = "none"; // hide description screen
 });
 
 }()); // end self executing function

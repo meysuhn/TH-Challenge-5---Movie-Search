@@ -1,8 +1,6 @@
 /* =================================
   Element Styles
 ==================================== */
-hidden
-search-button
 
 * {
   box-sizing: border-box;
@@ -280,10 +278,6 @@ button {
 
 
 
-
-
-
-
 /* =================================
   My Styles
 ==================================== */
@@ -309,6 +303,4 @@ button {
     color: black;
 }
 
-/* May need to add in media queries */
-
-/* MY STYLES END */
+/* My styles end */
