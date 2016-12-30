@@ -1,11 +1,8 @@
 /* =================================
   Element Styles
 ==================================== */
-
-/*poster-wrap
-material-icons poster-placeholder
-movie-poster*/
-li
+hidden
+search-button
 
 * {
   box-sizing: border-box;

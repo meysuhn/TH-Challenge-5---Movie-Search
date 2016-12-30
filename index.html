@@ -15,15 +15,9 @@
       <form class="search-form">
         <label class="is-hidden" for="search">Search a title</label>
         <input type="search" name="search" id="search" placeholder="Search a Title...">
-
-        <!-- ==============================================================
-             Comment out <label> and <input> below to filter search by year
-             ============================================================== -->
-
-
-              <label class="is-hidden" for="year">Any Year</label>
-              <input type="text" maxlength="4" name="year" id="year" placeholder="Year">
-
+        <label class="is-hidden" for="year">Any Year</label>
+        <input type="search" maxlength="4" name="year" id="year" placeholder="Year">
+        <!-- change year input from text to search to help alignment issue -->
 
         <button type="submit" id="submit" class="search-button"><i class="material-icons icn-search">search</i></button>
       </form>
@@ -40,7 +34,11 @@
 
 
     <div id="descriptionPage" class="movie-list description-movie">
-        <!-- Description information goes in here -->
+        <p id="backToResults"> 	&#60; Search results</p>
+        <div id="descriptionSection">
+            <!-- Description information goes in here -->
+        </div>
+
     </div>
 
 

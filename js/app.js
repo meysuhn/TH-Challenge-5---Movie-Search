@@ -8,6 +8,7 @@
 var allMovies = document.getElementById("movies"); //movies screen
 var movieDescriptionScreen = document.getElementById("descriptionPage"); //description screen
 var ombdAPI = "http://www.omdbapi.com";
+var movieHTML = "";
 
 allMovies.style.display = "block"; // show main screen on load.
 movieDescriptionScreen.style.display = "none"; // hide description screen on load.
@@ -37,13 +38,12 @@ $('#submit').click(function (evt) {
 
 
     function displayMovies(movie) { //the information received back from omdb is passed to this callback function. As the parameter I've named 'movie' then that's what I'm telling the programme to store the received information in, i.e the info received is being stored in a variable called 'movie'. That information is an object.
-
+    movieHTML = ""; //reset search results html
     if (movie.Response === "True") {
-        var movieHTML = "";
-        console.log("Total Results: " + movie.totalResults); //total results is a key on the returned JSON object which I've named 'movie'
+        //console.log("Total Results: " + movie.totalResults); //total results is a key on the returned JSON object which I've named 'movie'
 
         // the individual search results are objects stored in an array on the 'Search' key, all stored inside the movie variable.
-        console.log(movie.Search);
+        //console.log(movie.Search);
 
 
             $.each(movie.Search, function (i, item) { //the array received from omdb is called 'search'. I access this by accessing the information inside the movie object.
@@ -114,13 +114,19 @@ $("#movies").click(function(event) {
 
         allMovies.style.display = "none"; // show all movies screen on load.
         movieDescriptionScreen.style.display = "block"; // hide description screen on load.
-        $('#descriptionPage').html(descriptionHTML);
+        $('#descriptionSection').html(descriptionHTML);
 
     }
+
     $.getJSON(ombdAPI, dataToGet, movieDescription);
 
 
 });
 
+// When user is on description page, allow them to click back to search results
+$("#backToResults").click(function(event) {
+    allMovies.style.display = "block"; // show all movies screen on load.
+    movieDescriptionScreen.style.display = "none"; // hide description screen on load.
+});
 
 }()); // end self executing function
