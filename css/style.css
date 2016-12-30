@@ -1,6 +1,11 @@
-/* ================================= 
+/* =================================
   Element Styles
 ==================================== */
+
+/*poster-wrap
+material-icons poster-placeholder
+movie-poster*/
+li
 
 * {
   box-sizing: border-box;
@@ -56,7 +61,7 @@ button {
   z-index: 2000;
 }
 
-/* ================================= 
+/* =================================
   Page Components
 ==================================== */
 
@@ -110,6 +115,7 @@ button {
   font-size: 1.25em;
 }
 
+
 .movie-list li {
   margin: 1.925em 0 0;
 }
@@ -150,7 +156,7 @@ button {
   margin: auto;
 }
 
-/* ================================= 
+/* =================================
   Layout Styles
 ==================================== */
 
@@ -171,7 +177,7 @@ button {
   z-index: 1000;
 }
 
-/* ================================= 
+/* =================================
   Helper Classes
 ==================================== */
 
@@ -192,7 +198,7 @@ button {
   width: 1px;
 }
 
-/* ================================= 
+/* =================================
   Media Queries
 ==================================== */
 
@@ -203,7 +209,7 @@ button {
 }
 
 @media (min-width: 550px) {
-    
+
   .movie-list li {
     float: left;
     width: 50%;
@@ -258,7 +264,7 @@ button {
   }
 }
 
-@media (min-width: 769px) and (max-width: 999px) { 
+@media (min-width: 769px) and (max-width: 999px) {
   .movie-list li:nth-of-type(3n+1) {
     clear: left;
   }
@@ -273,3 +279,39 @@ button {
     clear: left;
   }
 }
+
+
+
+
+
+
+
+
+/* =================================
+  My Styles
+==================================== */
+
+.description-movie{
+    margin: 1.925em 0 0; /* This reduces the pic size without having to be in an li*/
+
+}
+
+.description-movie img{
+    width: 33.333%;
+    border: 10px solid white;
+    margin-right: 5%;
+    float: left;
+}
+
+.description-movie div{
+    display: inline-block;;
+}
+
+.description-movie h2 a:link{
+    text-decoration: none;
+    color: black;
+}
+
+/* May need to add in media queries */
+
+/* MY STYLES END */
