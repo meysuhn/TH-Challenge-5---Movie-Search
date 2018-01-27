@@ -7,7 +7,7 @@
 
 var allMovies = document.getElementById("movies"); //movies screen
 var movieDescriptionScreen = document.getElementById("descriptionPage"); //description screen
-var ombdAPI = "http://www.omdbapi.com";
+var ombdAPI = "http://www.omdbapi.com/?i=tt3896198&apikey=70995819";
 var movieHTML = "";
 
 allMovies.style.display = "block"; // show main screen on load.
